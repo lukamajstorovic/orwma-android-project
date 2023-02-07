@@ -11,31 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:background="@drawable/rectangle_background_green"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/roomList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></View>
 
-    <TextView
-        android:id="@+id/occupiedTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Occupied"
-        android:textColor="#FFD9D9D9"
-        android:textColorHighlight="#FFD9D9D9"
-        android:textColorHint="#FFD9D9D9"
-        android:textColorLink="#FFD9D9D9"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_background_green"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_background_green"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_background_green"
-        app:layout_constraintVertical_bias="0.506" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/roomList"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
@@ -47,16 +30,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rectangle_background_green" />
 
-    <TextView
-        android:id="@+id/vacantTextView"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_background_green"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_background_green"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_background_green"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_background_green" />
+
+    <Button
+        android:id="@+id/vacantButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:backgroundTint="#00000000"
+        android:stateListAnimator="@null"
         android:text="Vacant"
         android:textColor="#FFD9D9D9"
-        android:textColorHighlight="#FFD9D9D9"
-        android:textColorHint="#FFD9D9D9"
-        android:textColorLink="#FFD9D9D9"
-        android:textSize="26sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_background_green"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -64,15 +58,21 @@
         app:layout_constraintTop_toTopOf="@+id/rectangle_background_green"
         app:layout_constraintVertical_bias="0.506" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+    <Button
+        android:id="@+id/occupiedButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:backgroundTint="#00000000"
+        android:stateListAnimator="@null"
+        android:text="Occupied"
+        android:textColor="#FFD9D9D9"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_background_green"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_background_green"
-        app:layout_constraintGuide_begin="205dp"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_background_green"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_background_green" />
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_background_green"
+        app:layout_constraintVertical_bias="0.506" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

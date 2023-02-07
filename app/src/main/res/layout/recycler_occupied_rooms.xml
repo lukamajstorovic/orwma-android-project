@@ -38,11 +38,10 @@
         app:layout_constraintTop_toTopOf="parent"></View>
 
     <TextView
-        android:id="@+id/roomNumberTextView"
+        android:id="@+id/roomNumberOccupiedTextView"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="41"
         android:textColor="#FFD9D9D9"
@@ -51,7 +50,6 @@
         android:textColorLink="#FFD9D9D9"
         android:textSize="26sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,25 +65,103 @@
         app:layout_constraintStart_toEndOf="@+id/roomNumberView"
         app:layout_constraintTop_toTopOf="@+id/roomNumberView"></View>
 
-    <View
-        android:id="@+id/x_icon"
+    <Button
+        android:id="@+id/vacateButton"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/x_icon"
+        app:backgroundTint="#FFD9D9D9"
         app:layout_constraintBottom_toBottomOf="@+id/roomNumberView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/roomNumberView"
         app:layout_constraintTop_toTopOf="@+id/roomNumberView" />
 
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Name"
+        android:textColor="#7B7B7B"
+        android:textColorLink="#7B7B7B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/oibTextView"
+        app:layout_constraintEnd_toStartOf="@+id/startDateTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomIconView" />
+
+    <TextView
+        android:id="@+id/oibTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="OIB"
+        android:textColor="#7B7B7B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/endDateTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <TextView
+        android:id="@+id/startDateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Start date"
+        android:textColor="#7B7B7B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/oibTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/roomNumberView" />
+
+    <TextView
+        android:id="@+id/endDateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="End date"
+        android:textColor="#7B7B7B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/oibTextView"
+        app:layout_constraintTop_toBottomOf="@+id/startDateTextView" />
+
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="10dp"
         android:background="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roomIconView" />
+        app:layout_constraintTop_toBottomOf="@+id/oibTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

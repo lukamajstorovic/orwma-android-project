@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent"></View>
 
     <TextView
-        android:id="@+id/roomNumberTextView"
+        android:id="@+id/roomNumberVacantTextView"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginTop="24dp"
@@ -65,16 +65,6 @@
         app:layout_constraintStart_toEndOf="@+id/roomNumberView"
         app:layout_constraintTop_toTopOf="@+id/roomNumberView"></View>
 
-    <View
-        android:id="@+id/checkmark"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/checkmark"
-        app:layout_constraintBottom_toBottomOf="@+id/roomNumberView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/roomNumberView"
-        app:layout_constraintTop_toTopOf="@+id/roomNumberView" />
-
     <EditText
         android:id="@+id/nameEditText"
         android:layout_width="0dp"
@@ -82,10 +72,11 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
+        android:gravity="center_horizontal|center_vertical"
         android:background="@null"
         android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
-        android:text="Name"
         android:textColor="#7B7B7B"
         android:textColorHint="#7B7B7B"
         android:textColorLink="#7B7B7B"
@@ -100,18 +91,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:gravity="center_horizontal|center_vertical"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
         android:background="@null"
         android:ems="10"
+        android:hint="OIB"
         android:inputType="number"
+        android:textColorHint="#7B7B7B"
         android:textColor="#7B7B7B"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/endDate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameEditText"
-        tools:text="OIB" />
+        app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
 
     <EditText
         android:id="@+id/startDate"
@@ -121,6 +114,9 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="10dp"
         android:background="@null"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Start date"
+        android:textColorHint="#7B7B7B"
         android:ems="10"
         android:inputType="date"
         android:textColor="#7B7B7B"
@@ -128,26 +124,27 @@
         app:layout_constraintBottom_toTopOf="@+id/oibEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/nameEditText"
-        app:layout_constraintTop_toBottomOf="@+id/roomNumberView"
-        tools:text="Start date" />
+        app:layout_constraintTop_toBottomOf="@+id/roomNumberView" />
 
     <EditText
         android:id="@+id/endDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:gravity="center_horizontal|center_vertical"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:background="@null"
         android:ems="10"
+        android:hint="End date"
+        android:textColorHint="#7B7B7B"
         android:inputType="date"
         android:textColor="#7B7B7B"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/oibEditText"
-        app:layout_constraintTop_toBottomOf="@+id/startDate"
-        tools:text="End date" />
+        app:layout_constraintTop_toBottomOf="@+id/startDate" />
 
     <View
         android:id="@+id/divider"
@@ -159,5 +156,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/oibEditText" />
+
+    <Button
+        android:id="@+id/vacateButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/checkmark"
+        app:backgroundTint="#FFD9D9D9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/roomNumberView"
+        app:layout_constraintTop_toTopOf="@+id/roomNumberView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
